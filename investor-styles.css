@@ -1143,15 +1143,200 @@
 
 /* Responsive - Investor Page */
 @media (max-width: 768px) {
+    /* Typography scaling */
+    .investment-overview h2,
+    .financials h2,
+    .unit-economics h2,
+    .market-analysis h2,
+    .competition h2,
+    .gtm-strategy h2,
+    .use-of-funds h2,
+    .team-section h2,
+    .milestones h2,
+    .exit-strategy h2,
+    .risks h2,
+    .investor-contact h2 {
+        font-size: 32px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    /* Overview cards */
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .overview-value {
+        font-size: 36px;
+    }
+    
+    /* Problem/Solution */
     .ps-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
     
+    .ps-section h2 {
+        font-size: 28px;
+    }
+    
+    .ps-point h3 {
+        font-size: 18px;
+    }
+    
+    .ps-stat-number {
+        font-size: 42px;
+    }
+    
+    /* Financials */
+    .financials-table {
+        font-size: 14px;
+    }
+    
+    .financials-table th,
+    .financials-table td {
+        padding: 10px 8px;
+    }
+    
+    .fin-value {
+        font-size: 36px;
+    }
+    
+    /* Unit Economics */
+    .economics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .econ-card h3 {
+        font-size: 20px;
+    }
+    
+    .metric-value {
+        font-size: 28px;
+    }
+    
+    /* Market Analysis */
+    .market-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .market-value {
+        font-size: 42px;
+    }
+    
+    .target-segments h3 {
+        font-size: 26px;
+    }
+    
+    .segments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Competition */
+    .competition-table {
+        font-size: 13px;
+    }
+    
+    .competition-table th,
+    .competition-table td {
+        padding: 10px 8px;
+    }
+    
+    .moat-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* GTM Strategy */
+    .gtm-phases {
+        grid-template-columns: 1fr;
+    }
+    
+    .phase-card h3 {
+        font-size: 20px;
+    }
+    
+    /* Use of Funds */
+    .funds-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fund-amount {
+        font-size: 36px;
+    }
+    
+    .fund-card h3 {
+        font-size: 20px;
+    }
+    
+    .fund-percentage {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+    
+    /* Team */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-card {
+        padding: 30px;
+    }
+    
+    /* Exit Strategy */
+    .exit-scenarios {
+        grid-template-columns: 1fr;
+    }
+    
+    .exit-card h3 {
+        font-size: 20px;
+    }
+    
+    .valuation-number {
+        font-size: 24px;
+    }
+    
+    .exit-returns h3 {
+        font-size: 26px;
+    }
+    
+    .returns-table {
+        font-size: 13px;
+    }
+    
+    .returns-table th,
+    .returns-table td {
+        padding: 10px 8px;
+    }
+    
+    /* Risks */
+    .risks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .risk-card {
+        padding: 24px;
+    }
+    
+    .risk-card h3 {
+        font-size: 18px;
+    }
+    
+    /* Contact CTA */
     .contact-cta {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
-    .gtm-phases, .funds-grid, .exit-scenarios {
-        grid-template-columns: 1fr;
+    .investor-contact h2 {
+        font-size: 32px;
+    }
+    
+    .cta-content h3,
+    .cta-actions h3 {
+        font-size: 24px;
     }
 }

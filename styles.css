@@ -856,23 +856,62 @@ body {
    =========================== */
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 36px;
+    :root {
+        --section-padding: 50px 20px;
     }
     
+    /* Typography adjustments */
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    section h2 {
+        font-size: 32px;
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    /* Hero adjustments */
     .hero-stats {
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
     }
     
     .hero-ctas {
         flex-direction: column;
     }
     
+    /* Product cards */
     .product-grid, .modules-grid {
         grid-template-columns: 1fr;
     }
     
+    .product-card {
+        padding: 30px;
+    }
+    
+    .price {
+        font-size: 42px;
+    }
+    
+    /* Spec lists - more compact */
+    .spec-item {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    
+    /* ROI section */
     .roi-comparison {
         grid-template-columns: 1fr;
     }
@@ -881,13 +920,59 @@ body {
         display: none;
     }
     
+    .savings-number {
+        font-size: 48px;
+    }
+    
+    /* How it works */
+    .step-number {
+        font-size: 32px;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .step h3 {
+        font-size: 20px;
+    }
+    
+    /* Modules */
+    .module-card {
+        padding: 24px;
+    }
+    
+    .module-price {
+        font-size: 32px;
+    }
+    
+    /* Investment section - more compact */
+    .investment-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .stat-value {
+        font-size: 36px;
+    }
+    
+    /* Navigation */
     .nav-links {
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 12px;
         font-size: 14px;
     }
     
+    .nav-links a {
+        padding: 8px 12px;
+    }
+    
+    /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Contact form */
+    .contact-form {
+        padding: 30px;
     }
 }
