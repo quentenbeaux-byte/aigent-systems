@@ -509,5 +509,90 @@
             </div>
         </div>
     </footer>
+
+    <!-- Parts Modal -->
+    <div id="partsModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalPrice" class="modal-price"></p>
+            <div id="modalParts" class="parts-grid"></div>
+        </div>
+    </div>
+
+    <script src="parts-data.js"></script>
+    <script>
+        // Get modal element
+        const modal = document.getElementById('partsModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalPrice = document.getElementById('modalPrice');
+        const modalParts = document.getElementById('modalParts');
+        const closeBtn = document.querySelector('.modal-close');
+
+        // Function to open modal with tier data
+        function openPartsModal(tier) {
+            const data = partsData[tier];
+            if (!data) return;
+
+            modalTitle.textContent = data.name + ' - Complete Parts List';
+            modalPrice.textContent = data.price;
+            
+            // Build parts grid
+            modalParts.innerHTML = '';
+            data.parts.forEach(part => {
+                const partCard = document.createElement('div');
+                partCard.className = 'part-card';
+                partCard.innerHTML = `
+                    <div class="part-image-container">
+                        <img src="${part.image}" alt="${part.name}" class="part-image" onerror="this.src='images/parts/placeholder.jpg'">
+                    </div>
+                    <div class="part-info">
+                        <div class="part-category">${part.category}</div>
+                        <h4 class="part-name">${part.name}</h4>
+                        <p class="part-description">${part.description}</p>
+                    </div>
+                `;
+                modalParts.appendChild(partCard);
+            });
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal function
+        function closeModal() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners
+        closeBtn.onclick = closeModal;
+        
+        // Click outside modal to close
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+
+        // ESC key to close
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+
+        // Add click handlers to product cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach((card, index) => {
+                const tier = ['scout', 'sentinel', 'sovereign'][index];
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', function() {
+                    openPartsModal(tier);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
