@@ -1,0 +1,226 @@
+/* Aigent Core Section Styles */
+
+.aigent-core {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.aigent-core::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.core-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.core-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(34, 197, 94, 0.1);
+    border: 2px solid #22c55e;
+    border-radius: 50px;
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.aigent-core h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 16px;
+}
+
+.aigent-core .section-subtitle {
+    font-size: 20px;
+    color: #cbd5e1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.core-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.core-card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.core-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #22c55e 0%, #3b82f6 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.core-card:hover {
+    transform: translateY(-8px);
+    border-color: #22c55e;
+    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.2);
+}
+
+.core-card:hover::before {
+    opacity: 1;
+}
+
+.core-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
+}
+
+.core-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.core-card p {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.core-label {
+    display: inline-block;
+    padding: 8px 24px;
+    background: rgba(34, 197, 94, 0.2);
+    border: 2px solid #22c55e;
+    border-radius: 50px;
+    color: #22c55e;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.core-note {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: rgba(59, 130, 246, 0.1);
+    border-left: 4px solid #3b82f6;
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.core-note p {
+    font-size: 16px;
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.core-note strong {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+/* Premium Module Marketplace Updates */
+
+.modules h2 {
+    font-size: 48px;
+}
+
+.module-card.featured {
+    border: 2px solid rgba(34, 197, 94, 0.4);
+    position: relative;
+}
+
+.upgrade-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    background: rgba(34, 197, 94, 0.2);
+    border: 1px solid #22c55e;
+    border-radius: 20px;
+    color: #22c55e;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.module-card.featured:hover {
+    border-color: #22c55e;
+    box-shadow: 0 12px 40px rgba(34, 197, 94, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .aigent-core {
+        padding: 60px 0;
+    }
+    
+    .aigent-core h2 {
+        font-size: 32px;
+    }
+    
+    .aigent-core .section-subtitle {
+        font-size: 16px;
+    }
+    
+    .core-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .core-card {
+        padding: 24px 20px;
+    }
+    
+    .core-icon {
+        font-size: 48px;
+    }
+    
+    .core-card h3 {
+        font-size: 20px;
+    }
+    
+    .core-note {
+        padding: 20px;
+    }
+    
+    .modules h2 {
+        font-size: 32px;
+    }
+}
