@@ -8,7 +8,7 @@ const partsData = {
                 category: "CPU",
                 name: "AMD Ryzen 9 9950X",
                 description: "16-core, 32-thread processor with 5.7GHz boost",
-                image: "images/parts/ryzen-9950x.jpg"
+                image: "https://via.placeholder.com/400x300/1e293b/3b82f6?text=AMD+Ryzen+9+9950X"
             },
             {
                 category: "GPU",
