@@ -160,6 +160,21 @@ body {
     color: white;
     padding: 100px 20px;
     text-align: center;
+    position: relative;
+}
+
+.hero-video {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hero-video video {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .hero h1 {
